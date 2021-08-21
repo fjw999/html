@@ -1,0 +1,29 @@
+<!-- 页面上请放置一个文本框、一个按钮，要求用户输入正六边形的边长，点击按钮之后，在页面上显示出正六边形的面积。正六边形的面积计算公式，自己上网查。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>六边形边长:<input type="text" id="kuang"></p>
+    <button id="btn">计算正六边形面积</button>
+    <h3 id="sc"></h3>
+    <script>
+        var kuang = document.getElementById('kuang');
+        var btn = document.getElementById('btn');
+        var sc = document.getElementById('sc');
+        btn.onclick = function () {
+            var a =Number(kuang.value);
+            sc.innerHTML = parseInt((3 / 2) * Math.sqrt(3) * Math.pow(a, 2)*100)/100;
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!-- 页面上放置两个文本框，一个按钮。要求用户输入自己的身高和体重，点击按钮之后，在页面上显示出他的BMI身体指数。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>体重(kg):<input type="text" id="kuang1"></p>
+    <p>身高(m):<input type="text" id="kuang2"></p>
+    <button id="btn">计算BMI</button>
+    <h3 id="sc"></h3>
+    <script>
+        var kuang1 = document.getElementById('kuang1');
+        var kuang2 = document.getElementById('kuang2');
+        var btn = document.getElementById('btn');
+        var sc = document.getElementById('sc');
+        btn.onclick = function () {
+            var a = Number(kuang1.value);
+            var b = Number(kuang2.value);
+            sc.innerHTML =Math.round(a / Math.pow(b, 2)*100)/100;
+        }
+    </script>
+
+</body>
+
+</html>

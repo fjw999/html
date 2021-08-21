@@ -1,0 +1,29 @@
+<!-- 页面上放置一个文本框，一个按钮。用户输入摄氏温度，请显示对应的华氏温度。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>摄氏温度:<input type="text" id="kuang">℃</p>
+    <button id="btn">转换成华氏温度</button>
+    <h3 id="sc"></h3>
+    <script>
+        var btn = document.getElementById('btn');
+        var kuang = document.getElementById('kuang');
+        var sc = document.getElementById('sc');
+        btn.onclick = function () {
+            var c = Number(kuang.value);
+            sc.innerHTML = 9 * c / 5 + 32 + '℉';
+        }
+
+
+    </script>
+</body>
+
+</html>
